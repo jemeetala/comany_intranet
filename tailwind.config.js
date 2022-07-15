@@ -21,6 +21,7 @@ module.exports = {
         gray_700_11: "#55555511",
         gray_700: "#66666f",
         gray_400: "#c0c7cb",
+        gray_301: "#e0e0e0",
         blue_600: "#2b83e9",
         orange_800: "#eb6200",
         bluegray_100: "#cdcdcd",
