@@ -67,7 +67,7 @@ export const SelectBox = React.forwardRef(
             option: (provided) => ({
               ...provided,
               color: "#000",
-              "&:hover": { backgroundColor: "#ffffff", color: "#66666f" },
+              "&:hover": { backgroundColor: "#ffffff", color: "#5d5fef" },
             }),
             singleValue: (provided) => ({
               ...provided,

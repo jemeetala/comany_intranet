@@ -6,10 +6,9 @@ import {
   Row,
   Image,
   Text,
-  Button,
-  Input,
-  List,
   Stack,
+  Button,
+  List,
   Line,
 } from "components";
 
@@ -23,70 +22,135 @@ const HomePagePage = () => {
     navigate("/employeelist");
   }
 
-  const [inputvalue, setInputvalue] = React.useState("");
-
   return (
     <>
-      <Column className="bg-gray_100 font-segoeui items-center justify-start mx-[auto] lg:pb-[21px] xl:pb-[24px] pb-[28px] 3xl:pb-[33px] w-[100%]">
-        <Row className="bg-white_A700 border border-bluegray_50 border-solid items-center justify-start lg:p-[15px] xl:p-[17px] p-[20px] 3xl:p-[24px] w-[100%]">
+      <Column className="bg-gray_100 font-segoeui items-center justify-start mx-[auto] lg:pb-[14px] xl:pb-[16px] pb-[19px] 3xl:pb-[22px] w-[100%]">
+        <Row className="bg-white_A700 border border-bluegray_50 border-solid items-center justify-start lg:p-[10px] xl:p-[12px] p-[14px] 3xl:p-[16px] w-[100%]">
           <Image
             src={"images/img_image2_2.png"}
-            className="lg:h-[25px] xl:h-[29px] h-[32px] 2xl:h-[33px] 3xl:h-[39px] lg:ml-[23px] xl:ml-[26px] ml-[30px] 3xl:ml-[36px] object-contain lg:w-[24px] xl:w-[28px] w-[32px] 3xl:w-[38px]"
+            className="lg:h-[25px] xl:h-[29px] h-[32px] 2xl:h-[33px] 3xl:h-[39px] lg:ml-[27px] xl:ml-[31px] ml-[35px] 3xl:ml-[42px] object-contain lg:w-[24px] xl:w-[28px] w-[32px] 3xl:w-[38px]"
             alt="image2"
           />
           <Text className="font-semibold lg:ml-[6px] xl:ml-[7px] ml-[8px] 3xl:ml-[9px] xl:my-[3px] lg:my-[3px] my-[4px] lg:text-[14px] xl:text-[16px] text-[18px] 3xl:text-[21px] text-black_900 w-[auto]">
             FrashTeam
           </Text>
         </Row>
-        <Row className="bg-gray_101 border border-gray_300 border-solid font-sourcesanspro items-center justify-end mt-[11px] 3xl:mt-[13px] lg:mt-[8px] xl:mt-[9px] lg:p-[5px] xl:p-[6px] p-[7px] 3xl:p-[8px] w-[98%]">
-          <Button className="bg-white_A700 border border-gray_200 border-solid font-bold xl:my-[1px] lg:my-[1px] my-[2px] lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-deep_purple_400 w-[6%]">
-            DashBoard
-          </Button>
-          <Button
-            className="common-pointer bg-white_A700 border border-gray_200 border-solid font-bold ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] xl:my-[1px] lg:my-[1px] my-[2px] lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-gray_700 w-[7%]"
-            onClick={handleNavigate9}
-          >
-            Employee List
-          </Button>
-          <Button
-            className="common-pointer bg-white_A700 border border-gray_200 border-solid font-bold ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] xl:my-[1px] lg:my-[1px] my-[2px] lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-gray_700 w-[10%]"
-            onClick={handleNavigate8}
-          >
-            Employee Capabiility
-          </Button>
-          <Input
-            value={inputvalue}
-            onChange={(e) => setInputvalue(e?.target?.value)}
-            className="bg-transparent border-0 font-normal p-[0] px-[10px] 3xl:px-[12px] lg:px-[7px] xl:px-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-bluegray_500 text-bluegray_500 w-[100%]"
-            WrapClassName="3xl:ml-[651px] 3xl:pl-[12px] 3xl:pr-[26px] 3xl:py-[12px] border border-gray_400 border-solid flex lg:ml-[422px] lg:mt-[1px] lg:pl-[7px] lg:pr-[17px] lg:py-[7px] ml-[543px] mt-[2px] pl-[10px] pr-[22px] py-[10px] rounded-radius4 w-[25%] xl:ml-[483px] xl:mt-[1px] xl:pl-[8px] xl:pr-[19px] xl:py-[8px]"
-            name="Group187"
-            placeholder="Search.."
-            prefix={
+        <Stack className="bg-white_A700 border border-indigo_50 border-solid font-sourcesanspro lg:h-[56px] xl:h-[65px] h-[72px] 2xl:h-[73px] 3xl:h-[87px] mt-[11px] 3xl:mt-[13px] lg:mt-[8px] xl:mt-[9px] w-[98%]">
+          <Row className="absolute h-[max-content] inset-[0] items-start justify-center m-[auto] w-[95%]">
+            <Text className="font-semibold lg:mb-[6px] xl:mb-[7px] mb-[8px] 3xl:mb-[9px] 3xl:mt-[10px] lg:mt-[7px] xl:mt-[8px] mt-[9px] lg:text-[15px] xl:text-[17px] text-[20px] 3xl:text-[24px] text-deep_purple_A200 w-[auto]">
+              My DashBoard
+            </Text>
+            <Column className="bg-white_A700 border border-gray_200 border-solid items-start justify-start lg:ml-[448px] xl:ml-[512px] ml-[576px] 3xl:ml-[691px] xl:mt-[1px] lg:mt-[1px] mt-[2px] lg:p-[5px] xl:p-[6px] p-[7px] 3xl:p-[8px] rounded-radius4 w-[7%]">
+              <Text className="font-normal ml-[0] not-italic lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-indigo_A200 w-[auto]">
+                DashBoard
+              </Text>
+            </Column>
+            <Column className="bg-white_A700 border border-gray_200 border-solid items-center justify-start xl:mb-[1px] lg:mb-[1px] mb-[2px] lg:ml-[15px] xl:ml-[17px] ml-[20px] 3xl:ml-[24px] lg:p-[5px] xl:p-[6px] p-[7px] 3xl:p-[8px] rounded-radius4 w-[7%]">
+              <Text className="font-normal not-italic lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-indigo_A200 w-[auto]">
+                Employee List
+              </Text>
+            </Column>
+            <Column className="bg-white_A700 border border-gray_200 border-solid items-center justify-start lg:ml-[11px] xl:ml-[13px] ml-[15px] 3xl:ml-[18px] xl:mt-[3px] lg:mt-[3px] mt-[4px] lg:p-[4px] xl:p-[5px] p-[6px] 3xl:p-[7px] rounded-radius4 w-[6%]">
+              <Text className="font-normal not-italic lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-indigo_A200 w-[auto]">
+                Capabilities
+              </Text>
+            </Column>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] w-[3%]">
+              <div className="absolute bg-bluegray_900 lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
               <Image
-                src={"images/img_vector_5.png"}
-                className="cursor-pointer w-[20.01px] lg:w-[15px] xl:w-[17px] 2xl:w-[20px] 3xl:w-[24px] my-[auto]"
+                src={"images/img_vector_8.png"}
+                className="absolute lg:h-[13px] xl:h-[15px] h-[16px] 2xl:h-[17px] 3xl:h-[20px] inset-[0] justify-center m-[auto] object-contain lg:w-[12px] xl:w-[14px] w-[16px] 3xl:w-[19px]"
                 alt="Vector"
               />
-            }
-            suffix={
-              inputvalue?.length > 0 ? (
-                <Image
-                  onClick={() => setInputvalue("")}
-                  src={"images/close2.svg"}
-                  className="cursor-pointer w-[20.01px] lg:w-[15px] xl:w-[17px] 2xl:w-[20px] 3xl:w-[24px] my-[auto]"
-                  alt="Vector"
-                />
-              ) : (
-                ""
-              )
-            }
-          ></Input>
-          <Button className="bg-bluegray_900 font-normal mb-[1px] lg:ml-[6px] xl:ml-[7px] ml-[8px] 3xl:ml-[9px] lg:mr-[17px] xl:mr-[20px] mr-[23px] 3xl:mr-[27px] xl:mt-[1px] lg:mt-[1px] mt-[2px] not-italic lg:py-[6px] xl:py-[7px] py-[8px] 3xl:py-[9px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-white_A700 w-[5%]">
-            Search
-          </Button>
-        </Row>
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] w-[3%]">
+              <div className="absolute bg-white_A700 border border-gray_201 border-solid lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_vector_9.png"}
+                className="absolute lg:h-[13px] xl:h-[15px] h-[16px] 2xl:h-[17px] 3xl:h-[20px] inset-[0] justify-center m-[auto] object-contain w-[50%]"
+                alt="Vector"
+              />
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] w-[3%]">
+              <div className="absolute bg-white_A700 border border-gray_201 border-solid lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_vector_10.png"}
+                className="absolute bottom-[5%] lg:h-[25px] xl:h-[28px] h-[31px] 2xl:h-[32px] 3xl:h-[38px] inset-x-[0] mx-[auto] object-contain w-[76%]"
+                alt="Vector"
+              />
+            </Stack>
+            <Stack className="bg-red_600 lg:h-[28px] xl:h-[33px] h-[36px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] xl:my-[1px] lg:my-[1px] my-[2px] p-[11px] 3xl:p-[13px] lg:p-[8px] xl:p-[9px] rounded-radius19 w-[3%]">
+              <Image
+                src={"images/img_1_2.png"}
+                className="absolute xl:h-[10px] h-[11px] 2xl:h-[12px] 3xl:h-[14px] lg:h-[9px] inset-x-[0] mx-[auto] object-contain w-[33%]"
+                alt="1"
+              />
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] w-[3%]">
+              <div className="absolute bg-amber_100 lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_profilename_2.png"}
+                className="absolute lg:h-[11px] xl:h-[13px] h-[14px] 2xl:h-[15px] 3xl:h-[17px] inset-[0] justify-center m-[auto] object-contain w-[29%]"
+                alt="ProfileName"
+              />
+            </Stack>
+          </Row>
+          <Row className="absolute bg-white_A700 border border-indigo_50 border-solid items-center justify-end lg:p-[12px] xl:p-[14px] p-[16px] 3xl:p-[19px] w-[100%]">
+            <Text className="font-semibold lg:mb-[6px] xl:mb-[7px] mb-[8px] 3xl:mb-[9px] 3xl:mt-[10px] lg:mt-[7px] xl:mt-[8px] mt-[9px] lg:text-[15px] xl:text-[17px] text-[20px] 3xl:text-[24px] text-deep_purple_A200 w-[auto]">
+              My DashBoard
+            </Text>
+            <Button className="bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[448px] xl:ml-[512px] ml-[576px] 3xl:ml-[691px] xl:mt-[1px] lg:mt-[1px] mt-[2px] not-italic lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[6%]">
+              DashBoard
+            </Button>
+            <Button className="bg-white_A700 border border-gray_200 border-solid font-normal xl:mb-[1px] lg:mb-[1px] mb-[2px] lg:ml-[15px] xl:ml-[17px] ml-[20px] 3xl:ml-[24px] not-italic lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[7%]">
+              Employee List
+            </Button>
+            <Button className="bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[11px] xl:ml-[13px] ml-[15px] 3xl:ml-[18px] xl:mt-[3px] lg:mt-[3px] mt-[4px] not-italic lg:py-[4px] xl:py-[5px] py-[6px] 3xl:py-[7px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[6%]">
+              Capabilities
+            </Button>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] w-[3%]">
+              <div className="absolute bg-bluegray_900 lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_vector_11.png"}
+                className="absolute lg:h-[13px] xl:h-[15px] h-[16px] 2xl:h-[17px] 3xl:h-[20px] inset-[0] justify-center m-[auto] object-contain lg:w-[12px] xl:w-[14px] w-[16px] 3xl:w-[19px]"
+                alt="Vector"
+              />
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] w-[3%]">
+              <div className="absolute bg-white_A700 border border-gray_201 border-solid lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_vector_12.png"}
+                className="absolute lg:h-[13px] xl:h-[15px] h-[16px] 2xl:h-[17px] 3xl:h-[20px] inset-[0] justify-center m-[auto] object-contain w-[50%]"
+                alt="Vector"
+              />
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] w-[3%]">
+              <div className="absolute bg-white_A700 border border-gray_201 border-solid lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_vector_13.png"}
+                className="absolute bottom-[5%] lg:h-[25px] xl:h-[28px] h-[31px] 2xl:h-[32px] 3xl:h-[38px] inset-x-[0] mx-[auto] object-contain w-[76%]"
+                alt="Vector"
+              />
+            </Stack>
+            <Stack className="bg-red_600 lg:h-[28px] xl:h-[33px] h-[36px] 2xl:h-[37px] 3xl:h-[44px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] xl:my-[1px] lg:my-[1px] my-[2px] p-[11px] 3xl:p-[13px] lg:p-[8px] xl:p-[9px] rounded-radius19 w-[3%]">
+              <Image
+                src={"images/img_1_3.png"}
+                className="absolute xl:h-[10px] h-[11px] 2xl:h-[12px] 3xl:h-[14px] lg:h-[9px] inset-x-[0] mx-[auto] object-contain w-[33%]"
+                alt="1"
+              />
+            </Stack>
+            <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] lg:ml-[19px] xl:ml-[22px] ml-[25px] 3xl:ml-[30px] mr-[1px] w-[3%]">
+              <div className="absolute bg-amber_100 lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] rounded-radius2111 w-[100%]"></div>
+              <Image
+                src={"images/img_profilename_3.png"}
+                className="absolute lg:h-[11px] xl:h-[13px] h-[14px] 2xl:h-[15px] 3xl:h-[17px] inset-[0] justify-center m-[auto] object-contain w-[29%]"
+                alt="ProfileName"
+              />
+            </Stack>
+          </Row>
+        </Stack>
         <List
-          className="font-segoeui gap-[0] min-h-[auto] mt-[11px] 3xl:mt-[13px] lg:mt-[8px] xl:mt-[9px] w-[93%]"
+          className="font-segoeui gap-[0] min-h-[auto] lg:mt-[11px] xl:mt-[13px] mt-[15px] 3xl:mt-[18px] w-[93%]"
           orientation="vertical"
         >
           <Row className="items-center justify-between xl:my-[10px] my-[12px] 3xl:my-[14px] lg:my-[9px] w-[100%]">
