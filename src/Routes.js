@@ -1,4 +1,5 @@
 import React from "react";
+import EmployeeList from "pages/EmployeeList";
 import HomePage from "pages/HomePage";
 import EmployeeCapablityMapping from "pages/EmployeeCapablityMapping";
 import Addcapability from "pages/Addcapability";
@@ -18,6 +19,7 @@ const ProjectRoutes = () => {
           element={<EmployeeCapablityMapping />}
         />
         <Route path="/homepage" element={<HomePage />} />
+        <Route path="/employeelist" element={<EmployeeList />} />
       </Routes>
     </Router>
   );
