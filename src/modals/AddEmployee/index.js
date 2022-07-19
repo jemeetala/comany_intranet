@@ -7,7 +7,7 @@ import {
   Line,
   Input,
   Datepicker,
-  Image,
+  Img,
   SelectBox,
   Row,
   Button,
@@ -22,18 +22,18 @@ const AddEmployeeModal = (props) => {
         {...props}
       >
         <div className="m-[auto] max-h-[97vh] overflow-y-auto">
-          <Column className="bg-white_A700 justify-start lg:py-[18px] xl:py-[21px] py-[24px] 3xl:py-[28px] rounded-radius4 shadow-bs w-[100%]">
+          <Column className="bg-white_A700 lg:py-[18px] xl:py-[21px] py-[24px] 3xl:py-[28px] rounded-radius4 shadow-bs w-[100%]">
             <Text className="font-normal lg:ml-[18px] xl:ml-[21px] ml-[24px] 3xl:ml-[28px] lg:mr-[283px] xl:mr-[324px] mr-[365px] 3xl:mr-[438px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-black_900 w-[auto]">
               Add Capabilitiy
             </Text>
-            <Column className="items-center justify-start lg:mt-[19px] xl:mt-[22px] mt-[25px] 3xl:mt-[30px] w-[100%]">
+            <Column className="items-center lg:mt-[19px] xl:mt-[22px] mt-[25px] 3xl:mt-[30px] w-[100%]">
               <Line className="bg-gray_300 h-[1px] w-[100%]" />
               <Text className="font-normal font-segoeui lg:mt-[17px] xl:mt-[20px] mt-[23px] 3xl:mt-[27px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
                 First Name
               </Text>
               <Input
                 className="bg-transparent border-0 font-normal font-sourcesanspro not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
-                WrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
                 name="Group216"
                 placeholder="Cameron"
               ></Input>
@@ -42,7 +42,7 @@ const AddEmployeeModal = (props) => {
               </Text>
               <Input
                 className="bg-transparent border-0 font-normal font-sourcesanspro not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
-                WrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
                 name="Group216"
                 placeholder="Williamson"
               ></Input>
@@ -51,7 +51,7 @@ const AddEmployeeModal = (props) => {
               </Text>
               <Input
                 className="bg-transparent border-0 font-normal font-sourcesanspro not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
-                WrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
                 name="Group216"
                 placeholder="cameron@gmail.com"
               ></Input>
@@ -59,7 +59,7 @@ const AddEmployeeModal = (props) => {
                 Joining Date
               </Text>
               <Datepicker
-                className="placeholder:bg-transparent bg-transparent font-normal font-sourcesanspro p-[0] pl-[0] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
+                className="placeholder:bg-transparent bg-transparent font-normal font-sourcesanspro p-[0] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
                 name="Group216"
                 placeholder="01-08-2022"
               ></Datepicker>
@@ -68,7 +68,7 @@ const AddEmployeeModal = (props) => {
               </Text>
               <Input
                 className="bg-transparent border-0 font-normal font-sourcesanspro not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-black_900 text-black_900 w-[100%]"
-                WrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[90%] xl:mt-[7px]"
                 name="Group216"
                 placeholder="1234567890"
               ></Input>
@@ -83,9 +83,9 @@ const AddEmployeeModal = (props) => {
                 isSearchable={false}
                 isMulti={false}
                 indicator={
-                  <Image
-                    src={"images/img_vector_1.png"}
-                    className="w-[8.79px] h-[5.21px] mr-[17px] object-contain lg:w-[6px] lg:h-[5px] lg:mr-[13px] xl:w-[7px] xl:h-[5px] xl:mr-[15px] 2xl:w-[8px] 2xl:h-[6px] 3xl:w-[10px] 3xl:h-[7px] 3xl:mr-[20px]"
+                  <Img
+                    src="images/img_vector_1.png"
+                    className="w-[8.79px] h-[5.21px] mr-[17px] lg:w-[6px] lg:h-[5px] lg:mr-[13px] xl:w-[7px] xl:h-[5px] xl:mr-[15px] 2xl:w-[8px] 2xl:h-[6px] 3xl:w-[10px] 3xl:h-[7px] 3xl:mr-[20px]"
                     alt="Vector"
                   />
                 }

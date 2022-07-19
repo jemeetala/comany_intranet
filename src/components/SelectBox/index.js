@@ -1,6 +1,7 @@
-import { ErrorMessage } from "components/ErrorMessage";
+import { ErrorMessage } from "../ErrorMessage/index.js";
 import React from "react";
 import Select from "react-select";
+import PropTypes from "prop-types";
 
 const selectOptions = [
   { value: "option1", label: "Option1" },
@@ -8,7 +9,7 @@ const selectOptions = [
   { value: "option3", label: "Option3" },
 ];
 
-export const SelectBox = React.forwardRef(
+const SelectBox = React.forwardRef(
   (
     {
       children,
@@ -41,7 +42,7 @@ export const SelectBox = React.forwardRef(
         <Select
           ref={ref}
           options={options}
-          className={`${className} common-select`}
+          className={`${className}    common-select`}
           placeholder={
             <div className={placeholderClassName}>{placeholder}</div>
           }
@@ -64,9 +65,10 @@ export const SelectBox = React.forwardRef(
                 border: "0 !important",
               },
             }),
-            option: (provided) => ({
+            option: (provided, state) => ({
               ...provided,
-              color: "#000",
+              color: state.isSelected && "#fafafa",
+              backgroundColor: state.isSelected && "#ffffff",
               "&:hover": { backgroundColor: "#ffffff", color: "#5d5fef" },
             }),
             singleValue: (provided) => ({
@@ -115,3 +117,30 @@ export const SelectBox = React.forwardRef(
     );
   }
 );
+
+SelectBox.propTypes = {
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  options: PropTypes.array,
+  isSearchable: PropTypes.bool,
+  placeholderClassName: PropTypes.string,
+  isMulti: PropTypes.bool,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+  errors: PropTypes.array,
+  indicator: PropTypes.node,
+};
+SelectBox.defaultProps = {
+  placeholder: "Select",
+  className: "",
+  options: selectOptions,
+  isSearchable: false,
+  placeholderClassName: "",
+  isMulti: false,
+  onChange: () => {},
+  value: "",
+  errors: [],
+  indicator: null,
+};
+
+export { SelectBox };
