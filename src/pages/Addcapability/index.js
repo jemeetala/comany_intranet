@@ -1,17 +1,7 @@
 import React from "react";
 
 import { useNavigate } from "react-router-dom";
-import {
-  Column,
-  Row,
-  Img,
-  Text,
-  Button,
-  Stack,
-  Line,
-  Grid,
-  Input,
-} from "components";
+import { Column, Row, Img, Text, Button, Stack, Line, Input } from "components";
 
 const AddcapabilityPage = () => {
   const navigate = useNavigate();
@@ -92,12 +82,12 @@ const AddcapabilityPage = () => {
             />
           </Stack>
         </Row>
-        <Column className="bg-white_A700 font-actor lg:mt-[21px] xl:mt-[24px] mt-[27px] 3xl:mt-[32px] lg:p-[18px] xl:p-[21px] p-[24px] 3xl:p-[28px] rounded-radius4 shadow-bs w-[95%]">
-          <Text className="font-normal mx-[auto] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-black_900 w-[auto]">
+        <Column className="bg-white_A700 font-actor items-center lg:mt-[21px] xl:mt-[24px] mt-[27px] 3xl:mt-[32px] lg:p-[18px] xl:p-[21px] p-[24px] 3xl:p-[28px] rounded-radius4 shadow-bs w-[95%]">
+          <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-black_900 w-[auto]">
             Add Capability
           </Text>
-          <Line className="bg-gray_300 h-[1px] 3xl:h-[2px] 2xl:h-[2px] 3xl:ml-[111px] lg:ml-[72px] xl:ml-[82px] ml-[93px] xl:mr-[107px] mr-[121px] 3xl:mr-[145px] lg:mr-[94px] lg:mt-[17px] xl:mt-[19px] mt-[22px] 3xl:mt-[26px] w-[1104px]" />
-          <Row className="items-center justify-end ml-[auto] lg:mr-[355px] xl:mr-[406px] mr-[457px] 3xl:mr-[548px] mt-[10px] 3xl:mt-[12px] lg:mt-[7px] xl:mt-[8px] w-[22%]">
+          <Line className="bg-gray_300 h-[1px] 3xl:h-[2px] 2xl:h-[2px] lg:mt-[17px] xl:mt-[19px] mt-[22px] 3xl:mt-[26px] w-[1104px]" />
+          <Row className="items-center justify-center mt-[10px] 3xl:mt-[12px] lg:mt-[7px] xl:mt-[8px] w-[22%]">
             <Text className="font-normal not-italic lg:text-[18px] xl:text-[21px] text-[24px] 3xl:text-[28px] text-black_900 w-[auto]">
               Name:
             </Text>
@@ -105,85 +95,75 @@ const AddcapabilityPage = () => {
               Employee Name
             </Text>
           </Row>
-          <Column className="items-center lg:mb-[165px] xl:mb-[189px] mb-[213px] 3xl:mb-[255px] lg:ml-[63px] xl:ml-[72px] ml-[81px] 3xl:ml-[97px] 3xl:mr-[109px] lg:mr-[70px] xl:mr-[80px] mr-[91px] 3xl:mt-[100px] lg:mt-[65px] xl:mt-[74px] mt-[84px] w-[87%]">
-            <Grid className="lg:gap-[188px] xl:gap-[215px] gap-[242px] 3xl:gap-[290px] grid grid-cols-2 w-[100%]">
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Technical Knowledge of Flutter
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Technical Knowledge of Flutter"
-                ></Input>
-              </Column>
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Technical Knowledge of React
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Technical Knowledge of React"
-                ></Input>
-              </Column>
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Video Scripting
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Video Scripting"
-                ></Input>
-              </Column>
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Blog Writing
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Blog Writing"
-                ></Input>
-              </Column>
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Live Webinar
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Live Webinar"
-                ></Input>
-              </Column>
-              <Column className="w-[100%]">
-                <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
-                  Podcast
-                </Text>
-                <Input
-                  className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
-                  wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
-                  name="Group216"
-                  placeholder="Podcast"
-                ></Input>
-              </Column>
-            </Grid>
-            <Line className="bg-gray_300 h-[1px] lg:mt-[57px] xl:mt-[65px] mt-[74px] 3xl:mt-[88px] w-[42%]" />
-            <Row className="font-sourcesanspro items-center justify-center lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[13%]">
-              <Button className="border border-bluegray_900 border-solid font-normal not-italic lg:py-[6px] xl:py-[7px] py-[8px] 3xl:py-[9px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_900 text-center w-[47%]">
-                Cancel
-              </Button>
-              <Button className="bg-bluegray_900 font-normal lg:ml-[16px] xl:ml-[18px] ml-[21px] 3xl:ml-[25px] not-italic lg:py-[6px] xl:py-[7px] py-[8px] 3xl:py-[9px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-white_A700 w-[39%]">
-                Save
-              </Button>
-            </Row>
-          </Column>
+          <Row className="items-center 3xl:mt-[100px] lg:mt-[65px] xl:mt-[74px] mt-[84px] w-[87%]">
+            <Column className="lg:pr-[186px] xl:pr-[213px] pr-[240px] 3xl:pr-[288px] w-[60%]">
+              <Text className="font-normal not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Technical Knowledge of Flutter
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Technical Knowledge of Flutter"
+              ></Input>
+              <Text className="font-normal lg:mt-[17px] xl:mt-[19px] mt-[22px] 3xl:mt-[26px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Video Scripting
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Video Scripting"
+              ></Input>
+              <Text className="font-normal lg:mt-[31px] xl:mt-[36px] mt-[41px] 3xl:mt-[49px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Live Webinar
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[100%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Live Webinar"
+              ></Input>
+            </Column>
+            <Column className="w-[40%]">
+              <Text className="font-normal ml-[2px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Technical Knowledge of React
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] ml-[2px] mt-[8px] rounded-radius4 w-[99%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Technical Knowledge of React"
+              ></Input>
+              <Text className="font-normal lg:mt-[17px] xl:mt-[19px] mt-[22px] 3xl:mt-[26px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Blog Writing
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] mt-[8px] rounded-radius4 w-[99%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Blog Writing"
+              ></Input>
+              <Text className="font-normal ml-[3px] lg:mt-[31px] xl:mt-[36px] mt-[41px] 3xl:mt-[49px] not-italic lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] text-bluegray_500 w-[auto]">
+                Podcast
+              </Text>
+              <Input
+                className="bg-transparent border-0 font-normal not-italic lg:pl-[12px] xl:pl-[14px] pl-[16px] 3xl:pl-[19px] lg:pr-[27px] xl:pr-[31px] pr-[35px] 3xl:pr-[42px] py-[10px] 3xl:py-[12px] lg:py-[7px] xl:py-[8px] lg:text-[12px] xl:text-[14px] text-[16px] 3xl:text-[19px] placeholder:text-gray_301 text-gray_301 w-[100%]"
+                wrapClassName="3xl:mt-[9px] border border-gray_400 border-solid lg:mt-[6px] ml-[3px] mt-[8px] rounded-radius4 w-[99%] xl:mt-[7px]"
+                name="Group216"
+                placeholder="Podcast"
+              ></Input>
+            </Column>
+          </Row>
+          <Line className="bg-gray_300 h-[1px] lg:mt-[57px] xl:mt-[65px] mt-[74px] 3xl:mt-[88px] w-[37%]" />
+          <Row className="font-sourcesanspro items-center justify-center lg:mb-[165px] xl:mb-[189px] mb-[213px] 3xl:mb-[255px] lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[12%]">
+            <Button className="border border-bluegray_900 border-solid font-normal not-italic lg:py-[6px] xl:py-[7px] py-[8px] 3xl:py-[9px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_900 text-center w-[47%]">
+              Cancel
+            </Button>
+            <Button className="bg-bluegray_900 font-normal lg:ml-[16px] xl:ml-[18px] ml-[21px] 3xl:ml-[25px] not-italic lg:py-[6px] xl:py-[7px] py-[8px] 3xl:py-[9px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-white_A700 w-[39%]">
+              Save
+            </Button>
+          </Row>
         </Column>
       </Column>
     </>
