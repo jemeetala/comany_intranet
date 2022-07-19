@@ -16,6 +16,7 @@ module.exports = {
         red_600: "#e93c40",
         light_green_A700: "#29d000",
         indigo_A200: "#5d5fef",
+        bluegray_900_87: "#2d2f3087",
         gray_50: "#f9f8f9",
         black_900: "#000000",
         light_blue_A700: "#008cff",

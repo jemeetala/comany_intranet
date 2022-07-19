@@ -2,14 +2,34 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 import { Column, Row, Img, Text, Stack, Button, List, Line } from "components";
+import {
+  PieChart,
+  Pie,
+  ResponsiveContainer,
+  Cell,
+  Tooltip as RechartsTooltip,
+  Legend as RechartsLegend,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+} from "recharts";
+import { PieData, COLORS, BarData, BarData1, BarData2 } from "./chartData.js";
 
 const HomePagePage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate8() {
+  function handleNavigate1() {
+    navigate("/employeelist");
+  }
+  function handleNavigate2() {
     navigate("/employeecapablitymapping");
   }
-  function handleNavigate9() {
+  function handleNavigate14() {
+    navigate("/employeecapablitymapping");
+  }
+  function handleNavigate15() {
     navigate("/employeelist");
   }
 
@@ -93,10 +113,16 @@ const HomePagePage = () => {
             <Button className="bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[448px] xl:ml-[512px] ml-[576px] 3xl:ml-[691px] not-italic lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[6%]">
               DashBoard
             </Button>
-            <Button className="bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[15px] xl:ml-[17px] ml-[20px] 3xl:ml-[24px] not-italic lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[7%]">
+            <Button
+              className="common-pointer bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[15px] xl:ml-[17px] ml-[20px] 3xl:ml-[24px] not-italic lg:py-[5px] xl:py-[6px] py-[7px] 3xl:py-[8px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[7%]"
+              onClick={handleNavigate1}
+            >
               Employee List
             </Button>
-            <Button className="bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[11px] xl:ml-[13px] ml-[15px] 3xl:ml-[18px] not-italic lg:py-[4px] xl:py-[5px] py-[6px] 3xl:py-[7px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[6%]">
+            <Button
+              className="common-pointer bg-white_A700 border border-gray_200 border-solid font-normal lg:ml-[11px] xl:ml-[13px] ml-[15px] 3xl:ml-[18px] not-italic lg:py-[4px] xl:py-[5px] py-[6px] 3xl:py-[7px] rounded-radius4 lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-center text-indigo_A200 w-[6%]"
+              onClick={handleNavigate2}
+            >
               Capabilities
             </Button>
             <Stack className="lg:h-[32px] xl:h-[36px] h-[40px] 2xl:h-[41px] 3xl:h-[49px] ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] w-[3%]">
@@ -227,11 +253,22 @@ const HomePagePage = () => {
                     </Row>
                   </Column>
                 </Row>
-                <Img
-                  src="images/img_group190.png"
-                  className="absolute lg:h-[201px] xl:h-[230px] h-[258px] 2xl:h-[259px] 3xl:h-[310px] inset-x-[27%] lg:w-[200px] xl:w-[229px] w-[258px] 3xl:w-[309px]"
-                  alt="Group190"
-                />
+                <div className="absolute lg:h-[201px] xl:h-[230px] h-[258px] 2xl:h-[259px] 3xl:h-[310px] inset-x-[27%] lg:w-[200px] xl:w-[229px] w-[258px] 3xl:w-[309px]">
+                  <ResponsiveContainer>
+                    <PieChart>
+                      <Pie data={PieData} dataKey="c0" nameKey="name" label>
+                        {PieData.map((_, index) => (
+                          <Cell
+                            key={"cell_" + index}
+                            fill={COLORS[index % COLORS.length]}
+                          />
+                        ))}
+                      </Pie>
+                      <RechartsTooltip />
+                      <RechartsLegend />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
               </Stack>
               <Row className="lg:mt-[24px] xl:mt-[28px] mt-[32px] 3xl:mt-[38px] lg:pr-[30px] xl:pr-[34px] pr-[39px] 3xl:pr-[46px] w-[100%]">
                 <div className="bg-blue_600 lg:h-[16px] xl:h-[18px] h-[20px] 2xl:h-[21px] 3xl:h-[25px] rounded-radius3 lg:w-[15px] xl:w-[17px] w-[20px] 3xl:w-[24px]"></div>
@@ -265,50 +302,19 @@ const HomePagePage = () => {
                   Total Candidates
                 </Text>
                 <Stack className="lg:h-[215px] xl:h-[246px] h-[276px] 2xl:h-[277px] 3xl:h-[332px] xl:ml-[10px] ml-[12px] 3xl:ml-[14px] lg:ml-[9px] w-[95%]">
-                  <Column className="absolute items-center pl-[1px] top-[0] w-[100%]">
-                    <Row className="items-center justify-between w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        60
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        50
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        40
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        30
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        20
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        10
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        00
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                  </Column>
+                  <div className="absolute lg:h-[197px] xl:h-[226px] h-[253px] 2xl:h-[254px] 3xl:h-[304px] items-center pl-[1px] top-[0] w-[100%]">
+                    <ResponsiveContainer>
+                      <BarChart data={BarData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <RechartsTooltip />
+                        <RechartsLegend />
+                        <Bar dataKey="c0" fill="#bbbb77" stackId="a" />
+                        <Bar dataKey="c1" fill="#eb5757" stackId="a" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
                   <Row className="absolute h-[max-content] inset-y-[0] items-end my-[auto] lg:px-[5px] xl:px-[6px] px-[7px] 3xl:px-[8px] right-[4%] w-[87%]">
                     <Column className="items-center lg:mt-[30px] xl:mt-[34px] mt-[39px] 3xl:mt-[46px] lg:pr-[39px] xl:pr-[45px] pr-[51px] 3xl:pr-[61px] w-[21%]">
                       <div className="bg-blue_600 lg:h-[151px] xl:h-[173px] h-[194px] 2xl:h-[195px] 3xl:h-[233px] w-[58%]"></div>
@@ -358,50 +364,19 @@ const HomePagePage = () => {
                   Total Candidates
                 </Text>
                 <Stack className="lg:h-[215px] xl:h-[246px] h-[276px] 2xl:h-[277px] 3xl:h-[332px] xl:ml-[10px] ml-[12px] 3xl:ml-[14px] lg:ml-[9px] w-[95%]">
-                  <Column className="absolute items-center pl-[1px] top-[0] w-[100%]">
-                    <Row className="items-center justify-between w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        60
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        50
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        40
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        30
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        20
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        10
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        00
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                  </Column>
+                  <div className="absolute lg:h-[197px] xl:h-[226px] h-[253px] 2xl:h-[254px] 3xl:h-[304px] items-center pl-[1px] top-[0] w-[100%]">
+                    <ResponsiveContainer>
+                      <BarChart data={BarData1}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <RechartsTooltip />
+                        <RechartsLegend />
+                        <Bar dataKey="c0" fill="#6666ff" />
+                        <Bar dataKey="c1" fill="#ffd966" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
                   <Row className="absolute h-[max-content] inset-y-[0] items-end my-[auto] lg:px-[5px] xl:px-[6px] px-[7px] 3xl:px-[8px] right-[4%] w-[87%]">
                     <Column className="items-center lg:mt-[30px] xl:mt-[34px] mt-[39px] 3xl:mt-[46px] lg:pr-[39px] xl:pr-[45px] pr-[51px] 3xl:pr-[61px] w-[21%]">
                       <div className="bg-blue_600 lg:h-[151px] xl:h-[173px] h-[194px] 2xl:h-[195px] 3xl:h-[233px] w-[58%]"></div>
@@ -449,50 +424,19 @@ const HomePagePage = () => {
                   Total Candidates
                 </Text>
                 <Stack className="lg:h-[215px] xl:h-[246px] h-[276px] 2xl:h-[277px] 3xl:h-[332px] xl:ml-[10px] ml-[12px] 3xl:ml-[14px] lg:ml-[9px] w-[95%]">
-                  <Column className="absolute items-center pl-[1px] top-[0] w-[100%]">
-                    <Row className="items-center justify-between w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        60
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        50
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        40
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        30
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        20
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        10
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                    <Row className="items-center justify-between lg:mt-[15px] xl:mt-[17px] mt-[20px] 3xl:mt-[24px] w-[100%]">
-                      <Text className="font-semibold lg:text-[10px] xl:text-[12px] text-[14px] 3xl:text-[16px] text-bluegray_500 w-[auto]">
-                        00
-                      </Text>
-                      <Line className="bg-gray_300 h-[1px] w-[96%]" />
-                    </Row>
-                  </Column>
+                  <div className="absolute lg:h-[197px] xl:h-[226px] h-[253px] 2xl:h-[254px] 3xl:h-[304px] items-center pl-[1px] top-[0] w-[100%]">
+                    <ResponsiveContainer>
+                      <BarChart data={BarData2}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <RechartsTooltip />
+                        <RechartsLegend />
+                        <Bar dataKey="c0" fill="#ff4d79" />
+                        <Bar dataKey="c1" fill="#66ffff" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
                   <Row className="absolute h-[max-content] inset-y-[0] items-end my-[auto] lg:px-[5px] xl:px-[6px] px-[7px] 3xl:px-[8px] right-[4%] w-[87%]">
                     <Column className="items-center lg:mt-[30px] xl:mt-[34px] mt-[39px] 3xl:mt-[46px] lg:pr-[39px] xl:pr-[45px] pr-[51px] 3xl:pr-[61px] w-[21%]">
                       <div className="bg-blue_600 lg:h-[151px] xl:h-[173px] h-[194px] 2xl:h-[195px] 3xl:h-[233px] w-[58%]"></div>

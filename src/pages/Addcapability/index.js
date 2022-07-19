@@ -6,13 +6,13 @@ import { Column, Row, Img, Text, Button, Stack, Line, Input } from "components";
 const AddcapabilityPage = () => {
   const navigate = useNavigate();
 
-  function handleNavigate2() {
+  function handleNavigate8() {
     navigate("/employeecapablitymapping");
   }
-  function handleNavigate3() {
+  function handleNavigate9() {
     navigate("/employeelist");
   }
-  function handleNavigate4() {
+  function handleNavigate10() {
     navigate("/homepage");
   }
 
